@@ -1,0 +1,20 @@
+{
+    "name": "nhrrob/movies",
+    "description": "Build a movie database",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Nazmul Hasan Robin",
+            "email": "robin.sust08@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Nhrrob\\Movies\\" : "includes/"
+        },
+        "files": ["includes/functions.php"]
+    }
+}
