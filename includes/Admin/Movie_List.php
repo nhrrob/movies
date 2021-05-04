@@ -99,8 +99,8 @@ class Movie_List extends \WP_List_Table
         ];
 
         if (isset($_REQUEST['orderby']) && isset($_REQUEST['order'])) {
-            $args['orderby'] = $_REQUEST['orderby'];
-            $args['order'] = $_REQUEST['order'];
+            $args['orderby'] = sanitize_text_field($_REQUEST['orderby']);
+            $args['order'] = sanitize_text_field($_REQUEST['order']);
         }
 
         $this->items = nhrrob_movies_get_movies($args);

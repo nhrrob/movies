@@ -12,7 +12,7 @@
                     <td>
                         <input type="text" name="title" id="title" class="regular-text" value="">
                         <?php if ($this->has_error('title')) { ?>
-                            <p class="description error"><?= $this->get_error('title'); ?></p>
+                            <p class="description error"><?php echo $this->get_error('title'); ?></p>
                         <?php } ?>
                     </td>
                 </tr>

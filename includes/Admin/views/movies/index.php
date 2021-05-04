@@ -1,7 +1,7 @@
 <div class="wrap">
     <h1 class="wp-heading-inline"><?php _e('Movies', 'nhrrob-movies') ?></h1>
 
-    <a href="<?= admin_url('admin.php?page=nhrrob-movies&action=create'); ?>" class="page-title-action"><?php _e('Add New', 'nhrrob-movies'); ?></a>
+    <a href="<?php echo admin_url('admin.php?page=nhrrob-movies&action=create'); ?>" class="page-title-action"><?php _e('Add New', 'nhrrob-movies'); ?></a>
 
     <?php if (isset($_GET['inserted'])) { ?>
         <div class="notice notice-success">

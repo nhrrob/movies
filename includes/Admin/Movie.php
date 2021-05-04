@@ -11,7 +11,7 @@ class Movie
 
     public function plugin_page()
     {
-        $action = isset($_GET['action']) ? $_GET['action'] : 'list';
+        $action = isset($_GET['action']) ? sanitize_text_field($_GET['action']) : 'list';
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
         switch ($action) {

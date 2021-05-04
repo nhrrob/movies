@@ -16,9 +16,9 @@
                     </th>
 
                     <td>
-                        <input type="text" name="title" id="title" class="regular-text" value="<?= esc_attr($movie->title); ?>">
+                        <input type="text" name="title" id="title" class="regular-text" value="<?php echo esc_attr($movie->title); ?>">
                         <?php if ($this->has_error('title')) { ?>
-                            <p class="description error"><?= $this->get_error('title'); ?></p>
+                            <p class="description error"><?php echo $this->get_error('title'); ?></p>
                         <?php } ?>
                     </td>
                 </tr>
@@ -29,13 +29,13 @@
                     </th>
 
                     <td>
-                        <textarea type="text" name="description" id="description" class="regular-text"><?= esc_textarea($movie->description); ?></textarea>
+                        <textarea type="text" name="description" id="description" class="regular-text"><?php echo esc_textarea($movie->description); ?></textarea>
                     </td>
                 </tr>
 
             </tbody>
         </table>
-        <input type="hidden" name="id" value="<?= esc_attr($movie->id); ?>">
+        <input type="hidden" name="id" value="<?php echo esc_attr($movie->id); ?>">
         <?php wp_nonce_field('create-movie'); ?>
 
         <?php submit_button(__('Update Movie', 'nhrrob-movies'), 'primary', 'submit_movie'); ?>
